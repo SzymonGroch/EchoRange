@@ -1,0 +1,25 @@
+﻿@page
+@model EchoRange.Strona.IndexModel;
+@{
+    <h1>Pomiary</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Odleglość</th>
+                <!-- Add other headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pomiar in Model.Pomiar)
+            {
+                <tr>
+                    <td>@pomiar.IdOdleglosc</td>
+                    <td>@pomiar.Odleglosc_Pomiaru</td>
+                    <!-- Add other cells as needed -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
