@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services
        .AddRazorPages()
        .AddRazorPagesOptions(opt => opt.RootDirectory = "/Strona");
-//builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen();
 
 
 
@@ -23,9 +23,9 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
-    app.UseHsts();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    //app.UseHsts();
 }
 app.UseCors();
 app.UseHttpsRedirection();
@@ -35,6 +35,6 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapRazorPages();
+//app.MapRazorPages();
 //app.MapGet("/", () => "Hello World!");
 app.Run();
